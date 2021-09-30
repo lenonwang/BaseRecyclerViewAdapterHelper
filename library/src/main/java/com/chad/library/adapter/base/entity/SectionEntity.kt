@@ -13,7 +13,7 @@ interface SectionEntity : MultiItemEntity {
      * 用于返回item类型，除了头布局外，默认只有[NORMAL_TYPE]一种布局
      * 如果需要实现 item 多布局，请重写此方法，返回自己的type
      */
-    override val itemType: Int
+    override val listItemType: Int
         get() = if (isHeader) HEADER_TYPE else NORMAL_TYPE
 
     companion object {

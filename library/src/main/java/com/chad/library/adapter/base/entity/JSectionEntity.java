@@ -12,7 +12,7 @@ public abstract class JSectionEntity implements SectionEntity {
      * 如果需要实现 item 多布局，请重写此方法，返回自己的type
      */
     @Override
-    public int getItemType() {
+    public int getListItemType() {
         if (isHeader()) {
             return SectionEntity.Companion.HEADER_TYPE;
         } else {

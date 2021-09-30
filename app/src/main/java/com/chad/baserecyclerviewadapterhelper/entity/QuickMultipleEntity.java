@@ -46,7 +46,7 @@ public class QuickMultipleEntity implements MultiItemEntity {
     }
 
     @Override
-    public int getItemType() {
+    public int getListItemType() {
         return itemType;
     }
 }

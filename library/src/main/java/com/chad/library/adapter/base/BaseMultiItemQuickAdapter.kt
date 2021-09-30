@@ -23,7 +23,7 @@ abstract class BaseMultiItemQuickAdapter<T : MultiItemEntity, VH : BaseViewHolde
     private val layouts: SparseIntArray by lazy(LazyThreadSafetyMode.NONE) { SparseIntArray() }
 
     override fun getDefItemViewType(position: Int): Int {
-        return data[position].itemType
+        return data[position].listItemType
     }
 
     override fun onCreateDefViewHolder(parent: ViewGroup, viewType: Int): VH {
