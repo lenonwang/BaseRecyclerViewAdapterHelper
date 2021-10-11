@@ -37,7 +37,7 @@ public class ClickEntity implements MultiItemEntity {
     }
 
     @Override
-    public int getItemType() {
+    public int getListItemType() {
         return Type;
     }
 }

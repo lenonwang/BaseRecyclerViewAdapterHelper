@@ -43,7 +43,7 @@ public class SectionMultipleItem extends SectionMultiEntity<Video> implements Mu
     }
 
     @Override
-    public int getItemType() {
+    public int getListItemType() {
         return itemType;
     }
 }

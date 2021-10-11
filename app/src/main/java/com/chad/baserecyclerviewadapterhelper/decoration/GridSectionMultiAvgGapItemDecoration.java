@@ -23,7 +23,7 @@ import java.util.List;
 /**
  * 应用于RecyclerView的GridLayoutManager，水平方向上固定间距大小，从而使条目宽度自适应。<br>
  * 配合Brvah的SectionMulti使用，不对Head生效，仅对每个Head的子Grid列表生效<br>
- * 使用{@link #addSectionDecoration(int, SectionDecoration)}方法来增加对应的section定义，key值对应{@link SectionMultiEntity#getItemType()}<br>
+ * 使用{@link #addSectionDecoration(int, SectionDecoration)}方法来增加对应的section定义，key值对应{@link SectionMultiEntity#getListItemType()}<br>
  * 使用{@link #setLastSectionBottomMarginDp(float)}来定义最后一个section中最后一行的底部间距，设置后会覆盖最后一个section的底部间距<br>
  * Section Grid中Item的宽度应设为MATCH_PARAENT<br>
  *
@@ -179,7 +179,7 @@ public class GridSectionMultiAvgGapItemDecoration extends RecyclerView.ItemDecor
             int position = parent.getChildAdapterPosition(view);
             SectionMultiEntity entity = adapter.getItem(position);
 
-            SectionDecoration sectionDecoration = entity != null ? sectionDecorationMap.get(entity.getItemType()) : null;
+            SectionDecoration sectionDecoration = entity != null ? sectionDecorationMap.get(entity.getListItemType()) : null;
             if ((entity != null && entity.isHeader) || sectionDecoration == null) {
                 //不处理header
                 outRect.set(0, 0, 0, 0);

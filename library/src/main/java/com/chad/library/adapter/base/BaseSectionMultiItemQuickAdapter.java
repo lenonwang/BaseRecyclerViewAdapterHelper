@@ -46,7 +46,7 @@ public abstract class BaseSectionMultiItemQuickAdapter<T extends SectionMultiEnt
 
         if (item != null) {
             // check the item type include header or not
-            return item.isHeader ? SECTION_HEADER_VIEW : item.getItemType();
+            return item.isHeader ? SECTION_HEADER_VIEW : item.getListItemType();
         }
         return DEFAULT_VIEW_TYPE;
     }

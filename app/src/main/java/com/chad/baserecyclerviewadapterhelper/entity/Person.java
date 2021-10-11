@@ -17,7 +17,7 @@ public class Person implements MultiItemEntity{
     public int age;
 
     @Override
-    public int getItemType() {
+    public int getListItemType() {
         return ExpandableItemAdapter.TYPE_PERSON;
     }
 }
